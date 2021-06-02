@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  background: #F0F0F1;
+  font-family: 'Roboto', Tahoma, sans-serif;
+}
+.bbtn{
+  background: none;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+/* HEADER */
+.header{
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo{
+  color: #6F7070;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header .add{
+  background: #92ABE6;
+  color: #1A4BC3;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 8px 25px;
+  border-radius: 0 20px 20px 20px;
+}
+
+/* SEARCH */
+.search{
+  position: relative;
+  margin-top: 10px;
+}
+.search input{
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: #FFF;
+  height: 50px;
+  padding-left: 50px;
+}
+.search svg{
+  color: #6F7070;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.search .sort{
+  display: flex;
+  border-left: 1px solid #6F7070;
+  padding-left: 20px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.search .sort select{
+  font-size: .8rem;
+  border: 0;
+  outline: 0;
+  width: 65px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.search .sort select::-ms-expand{
+  display: none;
+}
+.search .sort button{
+  border: 0;
+  outline: 0;
+  background: none;
+}
+.search .sort button span{
+  display: block;
+  width: 23px;
+  height: 2px;
+  background: #6F7070;
+  margin-top: 4px;
+}
+.search .sort button span:nth-child(2){
+  width: 15px;
+}
+.search .sort button span:last-child{
+  width: 10px;
+}
+
+/* Main */
+.main{
+  position: relative;
+  margin-top: 30px;
+  padding-bottom: 100px;
+  height: 100%;
+}
+.main .tags{
+  display: block;
+  z-index: 1029;
+  position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 250px;
+  top: 0;
+  background: #FFFFFF;
+  color: #637381;
+  padding: 10px 20px 50px 20px;
+  height: 100vh;
+}
+.main .tags .tag1{
+  margin-bottom: 30px;
+}
+.main .tags h6{
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.main .tags p span{
+  font-size: .85rem;
+  margin-left: 8px;
+}
+.content{
+  margin-left: 250px;
+  position: relative;
+  float: unset;
+  clear: both;
+  right: 0;
+}
+.content .links{
+  display: flex;
+  justify-content: space-between;
+}
+.content .links ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.content .links ul li{
+  display: inline;
+  margin-right: 15px;
+  font-size: .8rem;
+  font-weight: 500;
+  color: #6F7070;
+}
+.content .links ul li.click{
+  display: inline-block;
+  cursor: pointer;
+}
+.content .links ul li.click span{
+  display: block;
+  width: 23px;
+  height: 2px;
+  background: #6F7070;
+  margin-top: 4px;
+}
+.content .links ul li.click span:nth-child(2){
+  width: 15px;
+}
+.content .links ul li.click span:last-child{
+  width: 10px;
+}
+.content .links ul li:last-child{
+  margin-right: 0;
+}
+.content .links ul li.active{
+  font-weight: 600;
+  border-bottom: 2px solid #1A4BC3;
+  padding-bottom: 5px;
+}
+
+/* Each Task */
+.tasks{
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.card-task{
+  background: #FFFFFF;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.card-task .first svg{
+  margin-top: 20px;
+}
+.card-task p{
+  margin: 0;
+  padding: 0;
+  font-size: .9rem;
+}
+.card-task .bold{
+  font-weight: 600;
+}
+.card-task .bold span{
+  font-size: .7rem;
+  font-weight: normal;
+  font-style: italic;
+}
+.card-task .small{
+  font-size: .8rem;
+}
+.card-task .name{
+  margin-left: 20px;
+}
+.card-task .name span{
+  font-size: .8rem;
+  background: #F0F0F0;
+  padding: 2px 15px;
+  border-radius: 8px;
+}
+.card-task .user img{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
+.card-task .status svg{
+  margin-top: 15px;
+}
+.card-task .main-btn{
+  background: inherit;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 5px 25px;
+  border-radius: 0 20px 20px 20px;
+  border: 1px solid #6F7070;
+}
+.card-task .drop{
+  cursor: pointer;
+}
+.card-task .drop span{
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 3px;
+  background: #637381;
+}
+.dropdown-toggle::after{
+  display: none;
+}
+.dropdown-item{
+  font-size: .9rem;
+}
+
+/* ADD TASK */
+.form-body{
+  padding: 10px 20px;
+}
+.form label{  
+  font-size: .9rem;
+}
+.form input , .form select{
+  width: 100%;
+  height: 45px;
+  outline: 0;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  border: 1px solid#637381;
+  border-radius: 5px;
+}
+
+
+@media(max-width: 991px){
+  .main .tags{
+    margin-left: -350px;
+  }
+  .main .tags.open-m{
+    margin-left: 0;
+  }
+  .content{
+    margin: 0;
+  }
+  .tasks{
+    margin-left: 0;
+  }
+}
