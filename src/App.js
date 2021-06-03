@@ -29,7 +29,7 @@ const App = () => {
     const [openModal, setOpenModal] = useState(false)
     const [open, setOpen] = useState(false)
     const [getTask, setGetTask] = useState([])
-    const [sortedTask, setSortedTask] = useState([])
+  
     const [selectSort, setSelectSort] = useState('')
     const [sortAlphabet, setSortAlphabet] = useState(false)
     const [sortPrice, setSortPrice] = useState(false)
@@ -122,7 +122,7 @@ const App = () => {
         let a = []
         filteredTags.map( filt => {
             let filter = getTask.filter(task => task.tag === filt)
-            a.push(filter)
+            return a.push(filter)
         })
         if(a.length > 0){
             let b = a.reduce((a, b) => a.concat(b))
