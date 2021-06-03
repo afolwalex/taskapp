@@ -177,6 +177,9 @@ body {
   margin-left: 25px;
   margin-top: 20px;
 }
+.links{
+  margin-left: 20px;
+}
 .card-task{
   background: #FFFFFF;
   margin-bottom: 20px;
@@ -277,6 +280,9 @@ body {
     margin: 0;
   }
   .tasks{
+    margin-left: 0;
+  }
+  .links{
     margin-left: 0;
   }
 }

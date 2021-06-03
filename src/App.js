@@ -24,9 +24,12 @@ const App = () => {
         {id: 4, name: 'Above N900'},
     ]
 
+    let filteredTags = []
+
     const [openModal, setOpenModal] = useState(false)
     const [open, setOpen] = useState(false)
     const [getTask, setGetTask] = useState([])
+    const [sortedTask, setSortedTask] = useState([])
     const [selectSort, setSelectSort] = useState('')
     const [sortAlphabet, setSortAlphabet] = useState(false)
     const [sortPrice, setSortPrice] = useState(false)
@@ -106,10 +109,27 @@ const App = () => {
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
+
+    // Still working on the filter
     const filterTags = (e) => {
-        console.log(e.target.value)
-        let filter = getTask.filter(task => task.tag === e.target.value)
-        setGetTask(filter)
+        
+        if(e.target.checked){
+            filteredTags.push(e.target.value)
+        }else{
+            filteredTags = filteredTags.filter(t => t !== e.target.value)
+        }
+
+        let a = []
+        filteredTags.map( filt => {
+            let filter = getTask.filter(task => task.tag === filt)
+            a.push(filter)
+        })
+        if(a.length > 0){
+            let b = a.reduce((a, b) => a.concat(b))
+            setGetTask(b)
+        }else{
+            setGetTask(getTask)
+        }
     }
 
     return (
